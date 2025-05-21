@@ -155,7 +155,7 @@ ul, ol {
 /* Layout */
 .container {
   width: 100%;
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 0 var(--spacing-6);
 }
@@ -230,7 +230,6 @@ p {
   left: 0;
   width: 100%;
   z-index: 50;
-  padding: var(--spacing-4) 0;
   transition: var(--transition-all);
 }
 
@@ -244,6 +243,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #3D90D7;
+  padding: 10px;
+  width: 100%;
 }
 
 .logo {

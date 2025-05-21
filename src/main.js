@@ -1,4 +1,3 @@
-/ Wait for the DOM to be fully loaded before running any JavaScript
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize all functionality
   initStickyHeader();
@@ -9,7 +8,31 @@ document.addEventListener('DOMContentLoaded', function() {
   initContactForm();
   initBackToTop();
   setCurrentYear();
+  // ✅ Set up the click listener to download on click, not on load
+//  document.addEventListener('DOMContentLoaded', function() {
+//   // other initializations...
+//   console.log("DOM fully loaded and parsed");
+
+//   const downloadBtn = document.querySelector("#downloadBtn")
+//   console.log("Download button:", downloadBtn);
+//   if (downloadBtn) {
+//     downloadBtn.addEventListener("click", downloadFile);
+//   }
+// });
+
 });
+
+ function downloadFile () {
+      const pdfUrl = "./resume_dub.pdf"; // Replace with your actual PDF path
+      const fileName = "resume.pdf"; // Desired file name for download
+
+      const link = document.createElement("a");
+      link.href = pdfUrl;
+      link.download = fileName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
 
 // Make the header sticky on scroll
 function initStickyHeader() {
