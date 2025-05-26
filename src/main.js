@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
  function downloadFile () {
-      const pdfUrl = "./resume_dub.pdf"; // Replace with your actual PDF path
-      const fileName = "resume.pdf"; // Desired file name for download
+      const pdfUrl = "./Jitesh_Resume.pdf"; // Replace with your actual PDF path
+      const fileName = "Jitesh_Resume.pdf"; // Desired file name for download
 
       const link = document.createElement("a");
       link.href = pdfUrl;
